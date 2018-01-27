@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="CS2114.gardernmanger.WinActivity" >
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#2E9AFE" />
+
+    <Button
+        android:id="@+id/restart_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/view1"
+        android:layout_marginBottom="82dp"
+        android:layout_marginRight="83dp"
+        android:text="Restart" />
+
+    <TextView
+        android:id="@+id/textViewappleTree"
+        android:layout_width="532dp"
+        android:layout_height="140dp"
+        android:layout_above="@+id/restart_win"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="61dp"
+        android:layout_marginLeft="42dp"
+        android:layout_weight="0.28"
+        android:text="Congratulation !!!
+You harvested enough fruit to win the game. If you would like to play again, press the restart button."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

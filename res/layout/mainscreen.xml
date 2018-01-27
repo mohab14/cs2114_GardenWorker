@@ -1,0 +1,428 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundd"
+    tools:context="CS2114.gardernmanger.MainscreenActivity" >
+
+    <requestFocus />
+    
+    <ImageView
+        android:id="@+id/little_house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toRightOf="@+id/scissors"
+        android:src="@drawable/little_house" />
+    
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="250dp"
+        android:layout_height="510dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#7fff00"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appleLabel"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/carrotLabel"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:text="0"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="712dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#daa520"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/waterCan"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/appleTree"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:background="?android:selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wateringcan_icon" />
+
+    <ImageButton
+        android:id="@+id/fertilizer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/glove"
+        android:layout_marginLeft="73dp"
+        android:layout_toRightOf="@+id/glove"
+        android:background="#00000000"
+        android:scaleType="fitXY"
+        android:src="@drawable/fertilizer_icon" />
+
+    <ImageButton
+        android:id="@+id/glove"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/scissors"
+        android:layout_alignTop="@+id/scissors"
+        android:layout_marginLeft="82dp"
+        android:layout_toRightOf="@+id/scissors"
+        android:background="#00000000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gloves" />
+
+    <ImageButton
+        android:id="@+id/scissors"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/waterCan"
+        android:layout_marginLeft="27dp"
+        android:layout_toRightOf="@+id/appleTree"
+        android:background="#00000000"
+        android:scaleType="fitCenter"
+        android:src="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/DeadApple"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@+id/appleRating"
+        android:layout_alignTop="@+id/appleTree"
+        android:text="DEAD" />
+
+    <ImageView
+        android:id="@+id/exit_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/exit" />
+
+    <TextView
+        android:id="@+id/flowerLabel"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView3"
+        android:ems="10"
+        android:text="0"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/carrotLabel"
+        android:layout_width="172dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/appleTree"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:ems="10"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/appleTree"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:src="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/reset_icon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/exit_icon"
+        android:src="@drawable/reset" />
+
+    <ImageView
+        android:id="@+id/treeTransplant"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_alignBottom="@+id/carrotLabel"
+        android:layout_alignLeft="@+id/DeadApple"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/tree_stage_transplanting" />
+
+    <ImageView
+        android:id="@+id/TreeVegetation"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/treeTransplant"
+        android:layout_alignRight="@+id/appleTree"
+        android:src="@drawable/tree_stage_vegetation" />
+
+    <ImageView
+        android:id="@+id/appleVegtationDead"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/TreeVegetation"
+        android:layout_centerVertical="true"
+        android:src="@drawable/tree_stage_vegetation_bad" />
+
+    <ImageView
+        android:id="@+id/appleTransplantDead"
+        android:layout_width="110dp"
+        android:layout_height="130dp"
+        android:layout_alignBottom="@+id/treeTransplant"
+        android:layout_alignLeft="@+id/treeTransplant"
+        android:src="@drawable/tree_stage_transplanting_bad" />
+
+    <ImageView
+        android:id="@+id/TreeSeeding"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:layout_alignBottom="@+id/treeTransplant"
+        android:layout_toRightOf="@+id/DeadApple"
+        android:src="@drawable/tree_stage_seeding" />
+
+    <ImageView
+        android:id="@+id/appleSeedDead"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@+id/TreeSeeding"
+        android:layout_toRightOf="@+id/DeadApple"
+        android:src="@drawable/tree_stage_seeding_bad" />
+
+    <ImageView
+        android:id="@+id/appleTree"
+        android:layout_width="190dp"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="19dp"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/tree_stage_flowering" />
+
+    <ImageView
+        android:id="@+id/instruction"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/linearLayout2"
+        android:src="@drawable/instruction" />
+
+    <ImageView
+        android:id="@+id/help"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/reset_icon"
+        android:src="@drawable/help" />
+
+    <RatingBar
+        android:id="@+id/appleRating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/appleVegtationDead"
+        android:layout_below="@+id/imageView3"
+        android:isIndicator="true"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/textViewappleTree"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/DeadApple"
+        android:text="Apple Tree" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TreeVegetation"
+        android:layout_below="@+id/scissors"
+        android:text="Water Can" />
+
+    <TextView
+        android:id="@+id/TextViewRose"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/roseRate"
+        android:layout_alignRight="@+id/roseRate"
+        android:text="Flower" />
+
+    <RatingBar
+        android:id="@+id/roseRate"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewappleTree"
+        android:layout_toLeftOf="@+id/glove" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Gloves" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scissors"
+        android:layout_alignParentBottom="true"
+        android:text="Garden Shears" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fertilizer"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="17dp"
+        android:text="Fertilizer" />
+
+    <ImageView
+        android:id="@+id/flower_vegetation_bad"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/flower_flowering"
+        android:layout_alignTop="@+id/flower_vegetation_healthy"
+        android:background="#00000000"
+        android:src="@drawable/flower_vegetation_bad" />
+
+    <ImageView
+        android:id="@+id/flower_transplanting_healthy"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/flower_flowering"
+        android:layout_alignRight="@+id/flower_flowering"
+        android:layout_marginRight="13dp"
+        android:background="#00000000"
+        android:src="@drawable/flower_transplanting_healthy" />
+
+    <ImageView
+        android:id="@+id/flower_transplanting_bad"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/flower_transplanting_healthy"
+        android:layout_alignTop="@+id/carrotLabel"
+        android:background="#00000000"
+        android:src="@drawable/flower_transplanting_bad" />
+
+    <ImageView
+        android:id="@+id/flower_vegetation_healthy"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/flower_flowering"
+        android:layout_alignLeft="@+id/flower_flowering"
+        android:background="#00000000"
+        android:src="@drawable/flower_vegetation_healthy" />
+
+    <ImageView
+        android:id="@+id/flower_seeding_healthy"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/flower_flowering"
+        android:layout_alignRight="@+id/flower_transplanting_healthy"
+        android:background="#00000000"
+        android:src="@drawable/flower_seeding_healthy" />
+
+    <ImageView
+        android:id="@+id/flower_seeding_bad"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/flower_seeding_healthy"
+        android:layout_alignTop="@+id/flower_seeding_healthy"
+        android:background="#00000000"
+        android:src="@drawable/flower_seeding_bad" />
+
+    <ImageView
+        android:id="@+id/flower_flowering"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/TreeVegetation"
+        android:layout_alignLeft="@+id/roseRate"
+        android:background="#00000000"
+        android:src="@drawable/flower_flowering" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/imageView3"
+        android:src="@drawable/flower_icon" />
+
+    <TextView
+        android:id="@+id/remainapple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="24"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/remainflower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/remainapple"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TreeSeeding"
+        android:layout_alignLeft="@+id/TextView01"
+        android:text="We Need:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/carrotLabel"
+        android:layout_alignLeft="@+id/textView3"
+        android:text="Apple:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/appleVegtationDead"
+        android:layout_alignRight="@+id/imageView1"
+        android:text="Flower:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reset_icon"
+        android:layout_alignRight="@+id/reset_icon"
+        android:layout_below="@+id/remainflower"
+        android:layout_toRightOf="@+id/instruction"
+        android:src="@drawable/empty_basket" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_toRightOf="@+id/flower_transplanting_bad"
+        android:src="@drawable/fence" />
+
+</RelativeLayout>
